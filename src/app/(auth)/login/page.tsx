@@ -1,13 +1,27 @@
+'use client';
 import Link from 'next/link';
 import React from 'react';
 
 export default function LoginPage() {
+  const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const email = event.currentTarget.email.value;
+    const password = event.currentTarget.password.value;
+
+    fetch('/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+  };
   return (
     // <!-- component -->
     // <!-- This is an example component -->
     <div className='h-screen w-full flex items-center justify-center'>
       <div className='w-1/3 bg-white shadow-md border border-gray-200 rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700'>
-        <form className='space-y-6' action='#'>
+        <form className='space-y-6' onSubmit={(event) => handleLogin(event)}>
           <h3 className='text-xl font-medium text-gray-900 dark:text-white'>
             Sign in to our platform
           </h3>
