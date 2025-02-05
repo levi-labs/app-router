@@ -3,14 +3,29 @@ import { NextRequest, NextResponse } from 'next/server';
 const data = [
   {
     id: 1,
-    name: 'Ahmad sanusi',
-    salary: 20000,
+    title: 'Ahmad sanusi',
+    price: 20000,
+    image: 'https://via.placeholder.com/150',
   },
   {
     id: 2,
-    name: 'Budi alonso',
-    salary: 45000,
+    title: 'Budi alonso',
+    price: 45000,
+    image: 'https://via.placeholder.com/150',
   },
+  {
+    id: 3,
+    title: 'Budi alonso',
+    price: 45000,
+    image: 'https://via.placeholder.com/150',
+  },
+  {
+    id: 4,
+    title: 'dean alonso',
+    price: 45000,
+    image: 'https://via.placeholder.com/150',
+  },
+ 
 ];
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams.get('id');
