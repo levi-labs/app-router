@@ -25,6 +25,12 @@ const data = [
     price: 45000,
     image: 'https://via.placeholder.com/150',
   },
+  {
+    id: 5,
+    title: 'dean alonso',
+    price: 45000,
+    image: 'https://via.placeholder.com/150',
+  },
  
 ];
 export async function GET(request: NextRequest) {

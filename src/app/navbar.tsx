@@ -6,7 +6,7 @@ export default function Navbar() {
   const router = useRouter();
   return (
     <nav className='flex bg-gray-800 p-4 items-center'>
-      <h1 className='text-3xl font-bold'>Navbar</h1>
+      <h1 className='text-white text-3xl font-bold'>Navbar</h1>
       <div className='flex-1'>
         <ul className='flex ml-5 gap-5 items-center'>
           <Link
